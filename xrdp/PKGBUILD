@@ -1,0 +1,54 @@
+# Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
+
+pkgname=xrdp
+pkgver=0.9.5
+pkgrel=1
+pkgdesc="An open source remote desktop protocol (rdp) server"
+arch=('i686' 'x86_64')
+url="http://www.xrdp.org/"
+license=('Apache')
+depends=('glibc' 'libxrandr' 'lame' 'opus' 'fuse')
+makedepends=('nasm')
+optdepends=('tigervnc: optional backend')
+backup=('etc/xrdp/cert.pem' 'etc/xrdp/key.pem' 'etc/xrdp/rsakeys.ini' 'etc/xrdp/sesman.ini' 'etc/xrdp/xrdp.ini')
+options=('staticlibs')
+source=("https://github.com/neutrinolabs/xrdp/releases/download/v$pkgver/xrdp-$pkgver.tar.gz"{,.asc}
+        "arch-config.patch")
+sha256sums=('0c66b06204237745be3f0a75bfdd22a2b27de97740490256964bb5082efb0042'
+            'SKIP'
+            '1320780945213282d05e1cf3149179debba9a4cc12405a4456e5a1398e5c9ee7')
+validpgpkeys=('61ECEABBF2BB40E3A35DF30A9F72CDBC01BF10EB')  # Koichiro IWAO <meta@vmeta.jp>
+
+
+prepare() {
+  cd "$pkgname-$pkgver"
+
+  patch -Np2 -i "$srcdir/arch-config.patch"
+}
+
+build() {
+  cd "$pkgname-$pkgver"
+
+  ./configure \
+    --prefix="/usr" --sysconfdir="/etc" --localstatedir="/var" --sbindir="/usr/bin" \
+    --with-systemdsystemunitdir="/usr/lib/systemd/system" \
+    --enable-fuse \
+    --enable-ipv6 \
+    --enable-tjpeg \
+    --enable-opus \
+    --enable-mp3lame \
+    --enable-pixman
+  make
+}
+
+check() {
+  cd "$pkgname-$pkgver"
+
+  #make check
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+
+  make DESTDIR="$pkgdir" install
+}
