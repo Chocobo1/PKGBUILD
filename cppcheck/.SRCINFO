@@ -1,0 +1,20 @@
+pkgbase = cppcheck
+	pkgdesc = Static analysis tool for C/C++ code
+	pkgver = 1.86
+	pkgrel = 1
+	url = http://cppcheck.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = docbook-xsl
+	makedepends = python
+	makedepends = qt5-tools
+	depends = hicolor-icon-theme
+	depends = qt5-base
+	depends = qt5-charts
+	source = cppcheck-1.86-src.tar.gz::https://github.com/danmar/cppcheck/archive/1.86.tar.gz
+	sha256sums = 86ea85c2ee5ec31a7410bfc7c206b87e600d284089428750d66d1ce1ffa0c9a6
+
+pkgname = cppcheck
+
