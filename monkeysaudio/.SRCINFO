@@ -1,0 +1,15 @@
+pkgbase = monkeysaudio
+	pkgdesc = A fast and powerful lossless audio compressor
+	pkgver = 4.68
+	pkgrel = 1
+	url = https://www.monkeysaudio.com/index.html
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = curl
+	depends = gcc-libs
+	source = https://monkeysaudio.com/files/MAC_SDK_468.zip
+	sha256sums = 209f59e101fea40f46e50fe1a72df1d474ada882093d196c3750a2a8402a505b
+
+pkgname = monkeysaudio
+
