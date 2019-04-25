@@ -1,6 +1,6 @@
 pkgbase = cppcheck
 	pkgdesc = Static analysis tool for C/C++ code
-	pkgver = 1.86
+	pkgver = 1.87
 	pkgrel = 1
 	url = http://cppcheck.sourceforge.net/
 	arch = i686
@@ -13,8 +13,8 @@ pkgbase = cppcheck
 	depends = hicolor-icon-theme
 	depends = qt5-base
 	depends = qt5-charts
-	source = cppcheck-1.86-src.tar.gz::https://github.com/danmar/cppcheck/archive/1.86.tar.gz
-	sha256sums = 86ea85c2ee5ec31a7410bfc7c206b87e600d284089428750d66d1ce1ffa0c9a6
+	source = cppcheck-1.87-src.tar.gz::https://github.com/danmar/cppcheck/archive/1.87.tar.gz
+	sha256sums = ea7ac1cd2f5c00ecffd596fd0f7281cba44308e565a634fae02b77ecd927c153
 
 pkgname = cppcheck
 
