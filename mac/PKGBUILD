@@ -1,7 +1,7 @@
 # Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
 
-pkgname=monkeysaudio
-pkgver=4.68
+pkgname=mac
+pkgver=4.69
 _pkgver="$(echo "$pkgver" | sed 's/\.//g')"
 pkgrel=1
 pkgdesc="A fast and powerful lossless audio compressor"
@@ -11,7 +11,7 @@ license=('custom')
 depends=('gcc-libs')
 makedepends=('curl')
 source=("https://monkeysaudio.com/files/MAC_SDK_$_pkgver.zip")
-sha256sums=('209f59e101fea40f46e50fe1a72df1d474ada882093d196c3750a2a8402a505b')
+sha256sums=('90e09014353ea2d1cfa6017ed74f40c02ba1f89fd86e1c492ffffd7e70441848')
 
 
 prepare() {
