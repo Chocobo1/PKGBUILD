@@ -1,7 +1,7 @@
 # Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
 
 pkgname=mac
-pkgver=4.69
+pkgver=4.92
 _pkgver="$(echo "$pkgver" | sed 's/\.//g')"
 pkgrel=1
 pkgdesc="A fast and powerful lossless audio compressor"
@@ -11,7 +11,7 @@ license=('custom')
 depends=('gcc-libs')
 makedepends=('curl')
 source=("https://monkeysaudio.com/files/MAC_SDK_$_pkgver.zip")
-sha256sums=('90e09014353ea2d1cfa6017ed74f40c02ba1f89fd86e1c492ffffd7e70441848')
+sha256sums=('65170024af5c6518afdf31a3533131473a2fd29341626a315f21ce8d048ecf08')
 
 
 prepare() {
@@ -32,5 +32,5 @@ package() {
   cd "$srcdir"
 
   make DESTDIR="$pkgdir" prefix="/usr" install
-  install -Dm644 "license.html" "$pkgdir/usr/share/licenses/monkeysaudio/license.html"
+  install -Dm644 "license.html" -t "$pkgdir/usr/share/licenses/monkeysaudio"
 }
