@@ -1,6 +1,6 @@
 pkgbase = xrdp
 	pkgdesc = An open source remote desktop protocol (rdp) server
-	pkgver = 0.9.11
+	pkgver = 0.9.12
 	pkgrel = 1
 	url = http://www.xrdp.org/
 	arch = i686
@@ -8,10 +8,14 @@ pkgbase = xrdp
 	license = Apache
 	makedepends = nasm
 	depends = glibc
+	depends = fuse
+	depends = libjpeg-turbo
+	depends = libxfixes
 	depends = libxrandr
 	depends = lame
 	depends = opus
-	depends = fuse
+	depends = pam
+	depends = pixman
 	optdepends = tigervnc: optional backend
 	options = staticlibs
 	backup = etc/xrdp/cert.pem
@@ -19,13 +23,13 @@ pkgbase = xrdp
 	backup = etc/xrdp/rsakeys.ini
 	backup = etc/xrdp/sesman.ini
 	backup = etc/xrdp/xrdp.ini
-	source = https://github.com/neutrinolabs/xrdp/releases/download/v0.9.11/xrdp-0.9.11.tar.gz
-	source = https://github.com/neutrinolabs/xrdp/releases/download/v0.9.11/xrdp-0.9.11.tar.gz.asc
-	source = arch-config.patch
+	source = https://github.com/neutrinolabs/xrdp/releases/download/v0.9.12/xrdp-0.9.12.tar.gz
+	source = https://github.com/neutrinolabs/xrdp/releases/download/v0.9.12/xrdp-0.9.12.tar.gz.asc
+	source = arch-config.patch::https://aur.archlinux.org/cgit/aur.git/plain/arch-config.diff?h=xrdp
 	validpgpkeys = 61ECEABBF2BB40E3A35DF30A9F72CDBC01BF10EB
-	sha256sums = 3569a29402ee2f5f1c07fa2adda68d6bda30f9c49b2582391d5065fb01a1a83c
+	sha256sums = 9d3d7865c372afc8f9acbd93d59f3a5aae244509577b003ffc46af8ff32a21e6
 	sha256sums = SKIP
-	sha256sums = 1320780945213282d05e1cf3149179debba9a4cc12405a4456e5a1398e5c9ee7
+	sha256sums = SKIP
 
 pkgname = xrdp
 

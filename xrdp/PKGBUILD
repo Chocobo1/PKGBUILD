@@ -1,22 +1,22 @@
 # Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
 
 pkgname=xrdp
-pkgver=0.9.11
+pkgver=0.9.12
 pkgrel=1
 pkgdesc="An open source remote desktop protocol (rdp) server"
 arch=('i686' 'x86_64')
 url="http://www.xrdp.org/"
 license=('Apache')
-depends=('glibc' 'libxrandr' 'lame' 'opus' 'fuse')
+depends=('glibc' 'fuse' 'libjpeg-turbo' 'libxfixes' 'libxrandr' 'lame' 'opus' 'pam' 'pixman')
 makedepends=('nasm')
 optdepends=('tigervnc: optional backend')
 backup=('etc/xrdp/cert.pem' 'etc/xrdp/key.pem' 'etc/xrdp/rsakeys.ini' 'etc/xrdp/sesman.ini' 'etc/xrdp/xrdp.ini')
 options=('staticlibs')
 source=("https://github.com/neutrinolabs/xrdp/releases/download/v$pkgver/xrdp-$pkgver.tar.gz"{,.asc}
-        "arch-config.patch")
-sha256sums=('3569a29402ee2f5f1c07fa2adda68d6bda30f9c49b2582391d5065fb01a1a83c'
+        "arch-config.patch::https://aur.archlinux.org/cgit/aur.git/plain/arch-config.diff?h=xrdp")
+sha256sums=('9d3d7865c372afc8f9acbd93d59f3a5aae244509577b003ffc46af8ff32a21e6'
             'SKIP'
-            '1320780945213282d05e1cf3149179debba9a4cc12405a4456e5a1398e5c9ee7')
+            'SKIP')
 validpgpkeys=('61ECEABBF2BB40E3A35DF30A9F72CDBC01BF10EB')  # Koichiro IWAO <meta@vmeta.jp>
 
 
@@ -30,14 +30,18 @@ build() {
   cd "$pkgname-$pkgver"
 
   ./configure \
-    --prefix="/usr" --sysconfdir="/etc" --localstatedir="/var" --sbindir="/usr/bin" \
+    --prefix="/usr" \
+    --sysconfdir="/etc" \
+    --localstatedir="/var" \
+    --sbindir="/usr/bin" \
     --with-systemdsystemunitdir="/usr/lib/systemd/system" \
     --enable-fuse \
     --enable-ipv6 \
-    --enable-tjpeg \
-    --enable-opus \
     --enable-mp3lame \
-    --enable-pixman
+    --enable-opus \
+    --enable-pixman \
+    --enable-tjpeg \
+    --enable-vsock
   make
 }
 
