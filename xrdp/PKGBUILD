@@ -1,7 +1,7 @@
 # Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
 
 pkgname=xrdp
-pkgver=0.9.12
+pkgver=0.9.13
 pkgrel=1
 pkgdesc="An open source remote desktop protocol (rdp) server"
 arch=('i686' 'x86_64')
@@ -14,7 +14,7 @@ backup=('etc/xrdp/cert.pem' 'etc/xrdp/key.pem' 'etc/xrdp/rsakeys.ini' 'etc/xrdp/
 options=('staticlibs')
 source=("https://github.com/neutrinolabs/xrdp/releases/download/v$pkgver/xrdp-$pkgver.tar.gz"{,.asc}
         "arch-config.patch::https://aur.archlinux.org/cgit/aur.git/plain/arch-config.diff?h=xrdp")
-sha256sums=('9d3d7865c372afc8f9acbd93d59f3a5aae244509577b003ffc46af8ff32a21e6'
+sha256sums=('59fe6f32f17e7b86c132e069ee96b754f0555b1197e44e4d070e85591d0271ff'
             'SKIP'
             'SKIP')
 validpgpkeys=('61ECEABBF2BB40E3A35DF30A9F72CDBC01BF10EB')  # Koichiro IWAO <meta@vmeta.jp>
