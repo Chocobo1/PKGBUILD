@@ -1,7 +1,7 @@
 # Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
 
 pkgname=cppcheck
-pkgver=2.1
+pkgver=2.2
 pkgrel=1
 pkgdesc="Static analysis tool for C/C++ code"
 arch=('i686' 'x86_64')
@@ -10,7 +10,7 @@ license=('GPL3')
 depends=('hicolor-icon-theme' 'qt5-base')
 makedepends=('cmake' 'docbook-xsl' 'python' 'qt5-tools')
 source=("$pkgname-$pkgver-src.tar.gz::https://github.com/danmar/cppcheck/archive/$pkgver.tar.gz")
-sha256sums=('447d44bbaa555fa78b89dd2cb0203fd4c6f18269db8a78638b968ba7c72cb02e')
+sha256sums=('ad96290a1842c5934bf9c4268cb270953f3078d4ce33a9a53922d6cb6daf61aa')
 
 
 prepare() {
