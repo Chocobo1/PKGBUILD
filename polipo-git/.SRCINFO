@@ -1,14 +1,14 @@
 pkgbase = polipo-git
 	pkgdesc = A caching web proxy
 	pkgver = 1.1.1.r41.g4d42ca1
-	pkgrel = 2
+	pkgrel = 3
 	url = https://www.irif.fr/~jch/software/polipo/
 	arch = i686
 	arch = x86_64
 	license = MIT
 	makedepends = git
 	depends = glibc
-	provides = polipo
+	provides = polipo=1.1.1.r41.g4d42ca1
 	conflicts = polipo
 	source = git+https://github.com/jech/polipo.git
 	source = polipo.service::https://aur.archlinux.org/cgit/aur.git/plain/polipo.service?h=polipo
