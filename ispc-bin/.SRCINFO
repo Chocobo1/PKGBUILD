@@ -1,0 +1,17 @@
+pkgbase = ispc-bin
+	pkgdesc = Intel SPMD program compiler
+	pkgver = 1.20.0
+	pkgrel = 1
+	url = https://ispc.github.io/
+	arch = x86_64
+	license = BSD
+	depends = glibc
+	optdepends = intel-compute-runtime: for targeting GPU
+	optdepends = intel-oneapi-tbb: for targeting GPU
+	optdepends = level-zero-loader: for targeting GPU
+	provides = ispc=1.20.0
+	conflicts = ispc
+	source_x86_64 = ispc-v1.20.0-linux.tar.gz::https://github.com/ispc/ispc/releases/download/v1.20.0/ispc-v1.20.0-linux.tar.gz
+	sha256sums_x86_64 = e6412b88aa312fcd10c46f92df0149ccc4d99e53552c4ce127aa6c634fe9b308
+
+pkgname = ispc-bin
