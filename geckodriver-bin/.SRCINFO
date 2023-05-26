@@ -1,0 +1,26 @@
+pkgbase = geckodriver-bin
+	pkgdesc = WebDriver for Firefox
+	pkgver = 0.33.0
+	pkgrel = 1
+	url = https://firefox-source-docs.mozilla.org/testing/geckodriver/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = MPL
+	provides = geckodriver=0.33.0
+	conflicts = geckodriver
+	validpgpkeys = 14F26682D0916CDD81E37B6D61B7B526D98F0353
+	source_i686 = https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux32.tar.gz
+	source_i686 = https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux32.tar.gz.asc
+	sha256sums_i686 = 71f4e7ef229ce7964afcee82750a910e4bdd3dd0ec1d4b155c62c77903439f91
+	sha256sums_i686 = SKIP
+	source_x86_64 = https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz
+	source_x86_64 = https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux64.tar.gz.asc
+	sha256sums_x86_64 = 5f5e89bb31fe5f55f963f56ef7e55a5c8e9dc415d94b1ddc539171a327b8e6c4
+	sha256sums_x86_64 = SKIP
+	source_aarch64 = https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux-aarch64.tar.gz
+	source_aarch64 = https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux-aarch64.tar.gz.asc
+	sha256sums_aarch64 = 00325caac5cbd9a45b4c5d1733cfdbeb43d0629f6cc5f5be909f23109548f88f
+	sha256sums_aarch64 = SKIP
+
+pkgname = geckodriver-bin
